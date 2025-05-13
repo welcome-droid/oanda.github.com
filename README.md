@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bank Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgb(222, 202, 202);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #ffffff;
+    }
+    p {
+      font-size: 16px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #f1f3ebec;
+      color: rgb(87, 68, 146);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #8eadb4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WELCOME TO OANDA Bank</h1>
+    <p><font color="white">24/7 BANKING</font></p>
+    <a href="SIGN IN.HTML" class="btn">Explore More</a>
+  </div>
+</body>
+</html>
