@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transfer MONEY</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label, .form-group input {
+      display: block;
+      width: 100%;
+    }
+    .form-group input {
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .amount-group {
+      position: relative;
+    }
+    .amount-group input {
+      padding-left: 30px;
+    }
+    .amount-group .dollar-sign {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .btn {
+      width: 100%;
+      height: 40px;
+      background-color: #3ca33f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #3e8e41;
+    }
+    .message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f44336;
+      color: #fff;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bank Transfer</h2>
+    <form id="transfer-form">
+      <div class="form-group">
+        <label for="bank-name">Bank Name:</label>
+        <input type="text" id="bank-name" name="bank-name" required>
+      </div>
+      <div class="form-group">
+        <label for="routine-number">Routine Number:</label>
+        <input type="text" id="routine-number" name="routine-number" required>
+      </div>
+      <div class="form-group">
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number" name="account-number" required>
+      </div>
+      <div class="form-group amount-group">
+        <label for="amount">Amount:</label>
+        <span class="dollar-sign"><br><br>$</span>
+        <input type="number" id="amount" name="amount" required>
+      </div>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <div class="message" id="message">User has not finished registration</div>
+</div>
+
+<script>
+  const form = document.getElementById('transfer-form');
+  const message = document.getElementById('message');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    message.style.display = 'block';
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 3000);
+  });
+</script>
+</body>
+</html>

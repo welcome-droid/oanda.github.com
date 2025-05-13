@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Customer Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f7f9fc;
+    }
+
+    .support-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #10a137;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-options {
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .contact-item span {
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #1db734;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0fbe49;
+    }
+
+    .success-message {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="support-container">
+    <h2><b>Customer Support</b></h2>
+
+    <div class="contact-options">
+      <div class="contact-item">
+        <span>Phone:</span> +1 (800) 123‑4567
+      </div>
+      <div class="contact-item">
+        <span>Email:</span>oandaforex2025@gmail.com
+      </div>
+      <div class="contact-item">
+        <span>Live Chat:</span> Available 24/7 on our ZANGI : 10-9715-1528
+      </div>
+    </div>
+
+    <h3>Contact Us</h3>
+
+    <form method="POST" onsubmit="showSuccessMessage()">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+
+      <!-- Optional: Prevent spam bots -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="success" class="success-message">
+      Message sent successfully!
+    </div>
+  </div>
+
+  <script>
+    function showSuccessMessage() {
+      document.getElementById('success').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
